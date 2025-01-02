@@ -64,13 +64,17 @@ nav li {
 .left-rectangle {
   width: 30%;
   background-color: rgb(34, 33, 33);
+  border: rgb(52, 80, 119) 4px solid;
+  border-radius: 10px;
+  margin-left: 20px;
+  margin-top: 10px;
   padding: 20px;
   color: whitesmoke;
+  margin-right: 20px
 }
 
 .right-rectangle {
   width: 70%;
-  border: 1px solid rgb(52, 80, 119);
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* 3 columns */
   grid-template-rows: repeat(2, 1fr); /* 2 rows */
@@ -80,8 +84,9 @@ nav li {
 
 .item {
   background-color: #eee;
-  padding: 10px;
-  border: rgb(52, 80, 119) 2px solid;
+  margin: 10px;
+  border: rgb(52, 80, 119) 4px solid;
+  border-radius: 10px;
   box-sizing: border-box;
 
   /* Use flexbox to center content within .item */
@@ -89,12 +94,14 @@ nav li {
   flex-direction: column; /* Stack icon and link vertically */
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
+
 }
 
 .item img {
   /* Make images larger while maintaining aspect ratio */
-  max-width: 80%; /* Adjust as needed */
-  max-height: 80%; /* Adjust as needed */
+  max-width: 300px; /* Adjust as needed */
+  max-height: 300px; /* Adjust as needed */
+  align-items: center;
   width: auto;
   height: auto;
 }
