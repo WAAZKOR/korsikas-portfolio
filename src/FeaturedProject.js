@@ -2,7 +2,7 @@ import React from 'react';
 
 function FeaturedProject({ projects, onProjectHover }) {
   return (
-    <div className="right-rectangle">
+    <>
       {projects.map(project => (
         <div 
           key={project.id}
@@ -15,7 +15,7 @@ function FeaturedProject({ projects, onProjectHover }) {
           </a>
         </div>
       ))}
-    </div>
+    </>
   );
 }
 

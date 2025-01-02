@@ -1,38 +1,119 @@
-.App {
+html {
+  font-size: 16px; /* Sets the base font size */
+}
+
+body {
+  margin: 0; /* Reset default margin */
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: gupter, sans-serif;
+  gap: 20px;
+  background-color: whitesmoke;
+  color: black;
+  min-height: 100vh;
+}
+
+.rectangles-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+  font-size: 3rem;
+  color: whitesmoke;
+}
+
+nav {
+  background-color: black;
+  padding: 10px;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: whitesmoke;
+}
+
+nav a {
+  text-decoration: none;
+  color: rgb(183, 175, 175);
+}
+
+nav a:hover {
+  color: darkgray;
+  text-decoration: underline;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav li {
+  display: inline-block;
+  margin-right: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.left-rectangle {
+  width: 30%;
+  background-color: rgb(34, 33, 33);
+  padding: 20px;
+  color: whitesmoke;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.right-rectangle {
+  width: 70%;
+  border: 1px solid rgb(52, 80, 119);
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-template-rows: repeat(2, 1fr); /* 2 rows */
+  gap: 10px;
+  overflow-y: auto;
+}
+
+.item {
+  background-color: #eee;
+  padding: 10px;
+  border: rgb(52, 80, 119) 2px solid;
+  box-sizing: border-box;
+
+  /* Use flexbox to center content within .item */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-direction: column; /* Stack icon and link vertically */
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
 }
 
-.App-link {
-  color: #61dafb;
+.item img {
+  /* Make images larger while maintaining aspect ratio */
+  max-width: 80%; /* Adjust as needed */
+  max-height: 80%; /* Adjust as needed */
+  width: auto;
+  height: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+footer {
+  background-color: black;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+  .rectangles-wrapper {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+
+  .left-rectangle,
+  .right-rectangle {
+    width: 100%;
   }
 }
